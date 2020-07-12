@@ -10,11 +10,24 @@ export default function Home(props) {
   const { posts } = props
   return (
     <Layout title="">
-      {posts.map((post) => <div key={post.slug}>
+      {posts.map((post) => <div
+        key={post.slug}
+        className="post-teaser"
+      >
         <h2><Link href="/posts/[id]" as={`/posts/${post.slug}`}><a>{post.title}</a></Link></h2>
         <div><span>{post.published}</span></div>
         <div></div>
       </div>)}
+
+      <style jsx>{`
+        .post-teaser {
+          margin-bottom: 2em;
+        }
+
+        .post-teaser h2 a {
+          text-decoration: none;
+        }
+      `}</style>
     </Layout>
   )
 }
