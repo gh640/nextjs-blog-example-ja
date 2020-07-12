@@ -70,6 +70,11 @@ const Layout = (props) => {
           color: #222;
         }
 
+        img,
+        iframe {
+          max-width: 100%;
+        }
+
         * {
           box-sizing: border-box;
         }
