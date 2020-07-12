@@ -3,18 +3,19 @@ import Link from "next/link"
 
 const Layout = (props) => {
   const { title, children } = props
+  const siteTitle = "後藤のブログ"
 
   return (
     <div className="page">
       <Head>
-        <title>{title}</title>
+        <title>{title ? `${title} | ${siteTitle}` : siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <header>
         <h1 className="site-title">
           <Link href="/">
-            <a>後藤のブログ</a>
+            <a>{siteTitle}</a>
           </Link>
         </h1>
       </header>
@@ -27,7 +28,7 @@ const Layout = (props) => {
       </main>
 
       <footer>
-        &copy; 後藤
+        &copy; {siteTitle}
       </footer>
 
       <style jsx>{`
