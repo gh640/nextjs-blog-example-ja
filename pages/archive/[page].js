@@ -4,12 +4,13 @@ import Head from "next/head"
 import Link from "next/link"
 
 import Layout from "../../components/Layout"
+import Pager from "../../components/Pager"
 import { listContentFiles, readContentFiles, readContentFile } from "../../lib/contentLoader"
 
 const COUNT_PER_PAGE = 10
 
 export default function Archive(props) {
-  const { posts, page, prevPage, nextPage } = props
+  const { posts, page, total, perPage } = props
   return (
     <Layout title="アーカイブ">
       {posts.map((post) => <div
@@ -20,23 +21,11 @@ export default function Archive(props) {
         <div><span>{post.published}</span></div>
       </div>)}
 
-      <div className="pager">
-        <span className="pager-item">
-          {prevPage ? (
-            <Link href="/archive/[page]" as={`/archive/${prevPage}`}>
-              <a>{prevPage}</a>
-            </Link>
-          ) : ``}
-        </span>
-        <span className="pager-item">{page}</span>
-        <span className="pager-item">
-          {nextPage ? (
-            <Link href={`/archive/[page]`} as={`/archive/${nextPage}`}>
-              <a>{nextPage}</a>
-            </Link>
-          ) : ``}
-        </span>
-      </div>
+      <Pager
+        page={page} total={total} perPage={perPage}
+        href="/archive/[page]"
+        asCallback={(page) => `/archive/${page}`}
+      />
 
       <style jsx>{`
         .post-teaser {
@@ -45,17 +34,6 @@ export default function Archive(props) {
 
         .post-teaser h2 a {
           text-decoration: none;
-        }
-
-        .pager {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          flew-wrap: nowrap;
-        }
-
-        .pager-item {
-          margin: 0 1em;
         }
       `}</style>
     </Layout>
@@ -66,21 +44,14 @@ export async function getStaticProps({ params }) {
   const page = parseInt(params.page, 10)
   const end = COUNT_PER_PAGE * page
   const start = end - COUNT_PER_PAGE
-
   const posts = await readContentFiles({ fs })
-
-  const prevPage = page > 1 ? page - 1 : null
-  let nextPage = null
-  if (page < Math.ceil(posts.length / COUNT_PER_PAGE)) {
-    nextPage = page + 1
-  }
 
   return {
     props: {
       posts: posts.slice(start, end),
       page,
-      prevPage,
-      nextPage,
+      total: posts.length,
+      perPage: COUNT_PER_PAGE,
     }
   }
 }
