@@ -1,6 +1,5 @@
 import fs from "fs"
 
-import Head from "next/head"
 import Link from "next/link"
 
 import Layout from "../../components/Layout"
@@ -71,24 +70,12 @@ export async function getStaticPaths() {
  */
 function range(stop) {
   if (typeof stop !== 'number') {
-    throw `Invalid types [${a}, ${stop}].`
+    throw `Invalid type: ${stop}.`
   }
 
   if (stop < 1) {
-    throw `Invalid range [${a}, ${stop}].`
+    throw `Invalid value: ${stop}.`
   }
 
-  return Array.from(iterator(stop))
-
-  function* iterator(max) {
-    let n = 1;
-    while (true) {
-      yield n
-      if (n >= max) {
-        break
-      }
-
-      n++
-    }
-  }
+  return Array.from({ length: stop }, (_, i) => i + 1)
 }
