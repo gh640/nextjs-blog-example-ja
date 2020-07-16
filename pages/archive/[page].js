@@ -4,7 +4,7 @@ import Link from "next/link"
 
 import Layout from "../../components/Layout"
 import Pager from "../../components/Pager"
-import { listContentFiles, readContentFiles, readContentFile } from "../../lib/contentLoader"
+import { listContentFiles, readContentFiles, readContentFile } from "../../lib/content-loader"
 
 const COUNT_PER_PAGE = 10
 

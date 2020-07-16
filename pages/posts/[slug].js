@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 
 import Layout from "../../components/Layout"
-import { listContentFiles, readContentFile } from "../../lib/contentLoader"
+import { listContentFiles, readContentFile } from "../../lib/content-loader"
 
 export default function Post(params) {
   return (
