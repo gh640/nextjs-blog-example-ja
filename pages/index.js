@@ -3,7 +3,7 @@ import fs from "fs"
 import Link from "next/link"
 
 import Layout from "../components/Layout"
-import { listContentFiles, readContentFiles, readContentFile } from "../lib/content-loader"
+import { readContentFiles } from "../lib/content-loader"
 
 export default function Home(props) {
   const { posts, hasArchive } = props
@@ -43,6 +43,9 @@ export default function Home(props) {
   )
 }
 
+/**
+ * ページコンポーネントで使用する値を用意する
+ */
 export async function getStaticProps({ params }) {
   const MAX_COUNT = 5
   const posts = await readContentFiles({ fs })

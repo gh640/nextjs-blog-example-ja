@@ -4,7 +4,7 @@ import Link from "next/link"
 
 import Layout from "../../components/Layout"
 import Pager from "../../components/Pager"
-import { listContentFiles, readContentFiles, readContentFile } from "../../lib/content-loader"
+import { listContentFiles, readContentFiles } from "../../lib/content-loader"
 
 const COUNT_PER_PAGE = 10
 
@@ -39,6 +39,9 @@ export default function Archive(props) {
   )
 }
 
+/**
+ * ページコンポーネントで使用する値を用意する
+ */
 export async function getStaticProps({ params }) {
   const page = parseInt(params.page, 10)
   const end = COUNT_PER_PAGE * page
@@ -55,6 +58,9 @@ export async function getStaticProps({ params }) {
   }
 }
 
+/**
+ * 有効な URL パラメータを全件返す
+ */
 export async function getStaticPaths() {
   const posts = await listContentFiles({ fs })
   const pages = range(Math.ceil(posts.length / COUNT_PER_PAGE))

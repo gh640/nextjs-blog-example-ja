@@ -17,6 +17,9 @@ export default function Post(params) {
   )
 }
 
+/**
+ * ページコンポーネントで使用する値を用意する
+ */
 export async function getStaticProps({ params }) {
   const content = await readContentFile({ fs, slug: params.slug })
 
@@ -27,6 +30,9 @@ export async function getStaticProps({ params }) {
   }
 }
 
+/**
+ * 有効な URL パラメータを全件返す
+ */
 export async function getStaticPaths() {
   const paths = listContentFiles({ fs })
     .map((filename) => ({
