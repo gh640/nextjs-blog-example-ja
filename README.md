@@ -37,3 +37,31 @@ npm install
 # 開発サーバーを止めたい場合は ctrl + c 等で
 npm run dev
 ```
+
+### Google Analytics のトラッキングコードを入れる
+
+環境変数 `GA_TRACKING_ID` でトラッキング ID をセットすれば、 Google Analytics のトラッキングコードをページに埋め込むことができます。
+
+環境変数はターミナルでセットする方法と `.env.local` ファイルを使用する方法が用意されているので、どちらでもやりやすい方を選んでください。
+
+ターミナル:
+
+```bash
+export GA_TRACKING_ID=UA-XXX-XX
+```
+
+`.env.local` ファイル:
+
+```text
+GA_TRACKING_ID=UA-XXX-XX
+```
+
+具体的にどのような形でトラッキングコードが埋め込まれているか知りたい場合は、プロジェクト内の `GA_TRACKING_ID` の使用箇所を探してみてください。
+
+```bash
+rg GA_TRACKING_ID
+```
+
+参考:
+
+- [Basic Features: Environment Variables | Next.js](https://nextjs.org/docs/basic-features/environment-variables)
