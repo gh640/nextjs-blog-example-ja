@@ -69,6 +69,7 @@ const Layout = (props) => {
           font-family: 'Noto Sans JP', -apple-system, "Segoe UI", "Helvetica Neue",
             "Hiragino Kaku Gothic ProN", メイリオ, meiryo, sans-serif;
           color: #222;
+          font-size: 16px;
         }
 
         img,
@@ -79,6 +80,15 @@ const Layout = (props) => {
         h1, h2, h3, h4, h5, h6 {
           font-family: Montserrat, -apple-system, "Segoe UI", "Helvetica Neue",
             "Hiragino Kaku Gothic ProN", メイリオ, meiryo, sans-serif;
+        }
+
+        /* Prism のコードブロックに影響を与えず <code> にスタイルを追加 */
+        code:not([class]) {
+          font-family: monospace;
+          font-size: 1rem;
+          background-color: #eee;
+          display: inline-block;
+          padding: .2em .4em;
         }
 
         * {

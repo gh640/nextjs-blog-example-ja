@@ -2,6 +2,8 @@ import fs from "fs"
 import path from "path"
 
 import Layout from "../../components/Layout"
+import "prismjs/themes/prism.css"
+import "prismjs/themes/prism-twilight.css"
 import { listContentFiles, readContentFile } from "../../lib/content-loader"
 
 export default function Post(params) {
