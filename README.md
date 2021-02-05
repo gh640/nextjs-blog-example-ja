@@ -40,6 +40,16 @@ npm install
 npm run dev
 ```
 
+### 公開用に静的サイトを生成する
+
+```bash
+# ビルド
+npm run build
+
+# 静的サイトを生成して　`out/` ディレクトリに出力する
+npm run export
+```
+
 ### Google Analytics のトラッキングコードを入れる
 
 環境変数 `GA_TRACKING_ID` でトラッキング ID をセットすれば、 Google Analytics のトラッキングコードをページに埋め込むことができます。
