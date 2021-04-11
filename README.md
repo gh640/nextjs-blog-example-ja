@@ -6,6 +6,10 @@ React ベースのフレームワーク [Next.js](https://nextjs.org/) でシン
 
 - [Next.js を使った JAMstack なブログの始め方 | gotohayato.com](https://gotohayato.com/content/517/)
 
+## 動作環境
+
+- Node v14
+
 ## 使用ライブラリ
 
 以下の NPM パッケージを使用しています。
