@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post renders correctly 1`] = `
+<div>
+  <span>
+    はじめての投稿
+  </span>
+  <div
+    className="post-meta"
+  >
+    <span>
+      2030/10/20
+    </span>
+  </div>
+  <div
+    className="post-body"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "## 見出し 2
+
+昔々あるところに。",
+      }
+    }
+  />
+</div>
+`;

@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pager renders collectly with first page 1`] = `
+<div
+  className="pager"
+>
+  <span
+    className="pager-item"
+  >
+    
+  </span>
+  <span
+    className="pager-item"
+  >
+    1
+  </span>
+  <span
+    className="pager-item"
+  >
+    <a
+      href="/archive/[page]"
+    >
+      2
+    </a>
+  </span>
+  <style
+    jsx={true}
+  >
+    
+        .pager {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flew-wrap: nowrap;
+        }
+
+        .pager-item {
+          margin: 0 1em;
+        }
+      
+  </style>
+</div>
+`;
+
+exports[`Pager renders collectly with last page 1`] = `
+<div
+  className="pager"
+>
+  <span
+    className="pager-item"
+  >
+    <a
+      href="/archive/[page]"
+    >
+      5
+    </a>
+  </span>
+  <span
+    className="pager-item"
+  >
+    6
+  </span>
+  <span
+    className="pager-item"
+  >
+    
+  </span>
+  <style
+    jsx={true}
+  >
+    
+        .pager {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flew-wrap: nowrap;
+        }
+
+        .pager-item {
+          margin: 0 1em;
+        }
+      
+  </style>
+</div>
+`;
+
+exports[`Pager renders collectly with second page 1`] = `
+<div
+  className="pager"
+>
+  <span
+    className="pager-item"
+  >
+    <a
+      href="/archive/[page]"
+    >
+      1
+    </a>
+  </span>
+  <span
+    className="pager-item"
+  >
+    2
+  </span>
+  <span
+    className="pager-item"
+  >
+    <a
+      href="/archive/[page]"
+    >
+      3
+    </a>
+  </span>
+  <style
+    jsx={true}
+  >
+    
+        .pager {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flew-wrap: nowrap;
+        }
+
+        .pager-item {
+          margin: 0 1em;
+        }
+      
+  </style>
+</div>
+`;

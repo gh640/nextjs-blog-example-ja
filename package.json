@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "test": "jest"
   },
   "dependencies": {
     "gray-matter": "^4.0.2",
@@ -20,5 +21,14 @@
   },
   "engines": {
     "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "babel-jest": "^27.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.4",
+    "react-test-renderer": "^17.0.2"
   }
 }
