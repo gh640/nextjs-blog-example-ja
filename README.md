@@ -1,3 +1,5 @@
+[![テスト](https://github.com/gh640/nextjs-blog-example-ja/actions/workflows/tests.yml/badge.svg)](https://github.com/gh640/nextjs-blog-example-ja/actions/workflows/tests.yml)
+
 # `nextjs-blog-example-ja`
 
 React ベースのフレームワーク [Next.js](https://nextjs.org/) でシンプルなブログを作るサンプルです。
