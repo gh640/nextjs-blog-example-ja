@@ -1,0 +1,31 @@
+name: "テスト"
+
+on:
+  push:
+  pull_request:
+
+env:
+  NODE_VERSION: '16'
+
+jobs:
+  jest:
+    name: Run tests with jest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install packages
+        run: npm install
+      - name: Run Tests
+        run: npm test
