@@ -27,6 +27,16 @@ React ベースのフレームワーク [Next.js](https://nextjs.org/) でシン
 Next.js を利用するために必要な `next` `react` `react-dom` の 3 つと、 frontmatter 付きの Markdown の HTML への変換に有用な `remark` `remark-html` `gray-matter` を使っています。
 追加で、シンタックスハイライトに Prism.js を利用するための `remark-prism` を使っています。
 
+自動テストには以下のパッケージを使用しています。
+
+- `@babel/core`
+- `@babel/preset-env`
+- `@babel/preset-react`
+- `babel-jest`
+- `identity-obj-proxy`
+- `jest`
+- `react-test-renderer`
+
 ## 使い方
 
 ### 開発環境で動かす
@@ -101,3 +111,11 @@ Prism には以下のテーマが同梱されています。
 - `prism-solarizedlight.css`
 - `prism-tomorrow.css`
 - `prism-twilight.css`
+
+## 自動テストを走らせる
+
+```bash
+npm test
+# または
+npm run test
+```
