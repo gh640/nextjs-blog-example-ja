@@ -1,10 +1,10 @@
 import { cloneElement } from "react"
 import renderer from "react-test-renderer"
 
-import Layout from "../../components/Layout"
-import Post from "../posts/[slug].js"
+import Layout from "../components/Layout"
+import Post from "../pages/posts/[slug].js"
 
-jest.mock("../../components/Layout")
+jest.mock("../components/Layout")
 
 describe("Post", () => {
 	Layout.mockImplementation(({ title, children }) => (
