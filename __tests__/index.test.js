@@ -2,11 +2,11 @@ import { cloneElement } from "react"
 import Link from "next/link"
 import renderer from "react-test-renderer"
 
-import Layout from "../../components/Layout"
-import Home from "../index.js"
+import Layout from "../components/Layout"
+import Home from "../pages/index.js"
 
 jest.mock("next/link")
-jest.mock("../../components/Layout")
+jest.mock("../components/Layout")
 
 describe("Home", () => {
 	Link.mockImplementation(({ href, children }) => 
