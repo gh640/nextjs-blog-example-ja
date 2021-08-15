@@ -39,6 +39,26 @@ Next.js を利用するために必要な `next` `react` `react-dom` の 3 つ�
 
 ## 使い方
 
+### GitHub Codespaces でとりあえず動かしてみる
+
+Codespaces でこのリポジトリを開きます。
+
+Codespaces の Visual Studio Code が開いたら「 Terminal 」のところから NPM パッケージをインストールします（ Codespaces が自動的にインストールすることもあります）。
+
+```bash
+npm install
+```
+
+開発用プレビューを起動します。
+
+```bash
+npm run dev
+```
+
+ポート `3000` が開いてポートフォワーディングが行われるのでその URL を開きます。
+
+試し終わったら Codespaces のスペースを破棄します。
+
 ### 開発環境で動かす
 
 ```bash
