@@ -3,91 +3,62 @@
 exports[`Home renders correctly with posts and archive 1`] = `
 Array [
   <div
-    className="post-teaser"
+    className="jsx-4006167202 post-teaser"
   >
-    <h2>
+    <h2
+      className="jsx-4006167202"
+    >
       <a
+        className="jsx-4006167202"
         href="/posts/[id]"
       >
         かきくけこ
       </a>
     </h2>
-    <div>
-      <span>
+    <div
+      className="jsx-4006167202"
+    >
+      <span
+        className="jsx-4006167202"
+      >
         2020/08/27
       </span>
     </div>
   </div>,
   <div
-    className="post-teaser"
+    className="jsx-4006167202 post-teaser"
   >
-    <h2>
+    <h2
+      className="jsx-4006167202"
+    >
       <a
+        className="jsx-4006167202"
         href="/posts/[id]"
       >
         あいうえお
       </a>
     </h2>
-    <div>
-      <span>
+    <div
+      className="jsx-4006167202"
+    >
+      <span
+        className="jsx-4006167202"
+      >
         2018/05/27
       </span>
     </div>
   </div>,
   <div
-    className="home-archive"
+    className="jsx-4006167202 home-archive"
   >
     <a
+      className="jsx-4006167202"
       href="/archive/[page]"
     >
       アーカイブ
     </a>
   </div>,
-  <style
-    jsx={true}
-  >
-    
-        .post-teaser {
-          margin-bottom: 2em;
-        }
-
-        .post-teaser h2 a {
-          text-decoration: none;
-        }
-
-        .home-archive {
-          margin: 3em;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-        }
-      
-  </style>,
 ]
 `;
 
-exports[`Home renders correctly without posts nor archive 1`] = `
-Array [
-  "",
-  <style
-    jsx={true}
-  >
-    
-        .post-teaser {
-          margin-bottom: 2em;
-        }
-
-        .post-teaser h2 a {
-          text-decoration: none;
-        }
-
-        .home-archive {
-          margin: 3em;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-        }
-      
-  </style>,
-]
-`;
+exports[`Home renders correctly without posts nor archive 1`] = `""`;
