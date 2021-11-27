@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Post renders correctly 1`] = `
+exports[`Post renders correctly with markdown 1`] = `
 <div>
   <span>
     はじめての投稿
@@ -14,13 +14,75 @@ exports[`Post renders correctly 1`] = `
   </div>
   <div
     className="post-body"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "## 見出し 2
+  >
+    <h2>
+      見出し 2
+    </h2>
+    
 
-昔々あるところに。",
-      }
-    }
-  />
+    <p>
+      昔々あるところに。
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Post renders correctly with raw html 1`] = `
+<div>
+  <span>
+    はじめての投稿
+  </span>
+  <div
+    className="post-meta"
+  >
+    <span>
+      2030/10/20
+    </span>
+  </div>
+  <div
+    className="post-body"
+  >
+    <h3>
+      テーブルサンプル
+    </h3>
+    
+
+    <div>
+      
+	
+      <table>
+        <thead>
+          <tr>
+            <th>
+              カラム 1
+            </th>
+            <th>
+              カラム 2
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              1.1
+            </td>
+            <th>
+              1.2
+            </th>
+          </tr>
+          <tr>
+            <td>
+              2.1
+            </td>
+            <th>
+              2.2
+            </th>
+          </tr>
+        </tbody>
+      </table>
+      
+
+    </div>
+  </div>
 </div>
 `;

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Markdown renders collectly with html 1`] = `
+Array [
+  <h3>
+    テーブルサンプル
+  </h3>,
+  "
+",
+  <div>
+    
+	
+    <table>
+      <thead>
+        <tr>
+          <th>
+            カラム 1
+          </th>
+          <th>
+            カラム 2
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            1.1
+          </td>
+          <th>
+            1.2
+          </th>
+        </tr>
+        <tr>
+          <td>
+            2.1
+          </td>
+          <th>
+            2.2
+          </th>
+        </tr>
+      </tbody>
+    </table>
+    
+
+  </div>,
+]
+`;
+
+exports[`Markdown renders collectly with simple markdown 1`] = `
+Array [
+  <h1>
+    見出し 1
+  </h1>,
+  "
+",
+  <h1>
+    見出し 2
+  </h1>,
+  "
+",
+  <ul>
+    
+
+    <li>
+      これは
+    </li>
+    
+
+    <li>
+      リスト
+    </li>
+    
+
+    <li>
+      です
+    </li>
+    
+
+  </ul>,
+]
+`;
