@@ -19,13 +19,13 @@ React ベースのフレームワーク [Next.js](https://nextjs.org/) でシン
 - `next`
 - `react`
 - `react-dom`
-- `remark`
-- `remark-html`
-- `remark-prism`
+- `react-markdown`
+- `rehype-raw`
 - `gray-matter`
+- `prismjs`
 
-Next.js を利用するために必要な `next` `react` `react-dom` の 3 つと、 frontmatter 付きの Markdown の HTML への変換に有用な `remark` `remark-html` `gray-matter` を使っています。
-追加で、シンタックスハイライトに Prism.js を利用するための `remark-prism` を使っています。
+Next.js を利用するために必要な `next` `react` `react-dom` の 3 つと、 frontmatter 付きの Markdown の HTML への変換に有用な `react-markdown` `rehype-raw` `gray-matter` を使っています。
+追加で、シンタックスハイライトに Prism.js を利用するための `prismjs` を使っています。
 
 自動テストには以下のパッケージを使用しています。
 
@@ -116,13 +116,13 @@ rg GA_TRACKING_ID
 
 ### Prism のテーマを変更する
 
-`pages/posts/[slug].js` で読み込むテーマ用 CSS ファイルを変更すれば、コードのシンタックスハイライトのテーマを変更できます。
+`components/Markdown.js` で読み込むテーマ用 CSS ファイルを変更すれば、コードのシンタックスハイライトのテーマを変更できます。
 
 ```js
 import "prismjs/themes/prism-funky.css"
 ```
 
-Prism には以下のテーマが同梱されています。
+なお、 Prism には以下のテーマが同梱されています。
 
 - `prism-coy.css`
 - `prism-dark.css`

@@ -14,7 +14,7 @@ describe("Post", () => {
 		</div>
 	))
 
-	it("renders correctly", () => {
+	it("renders correctly with markdown", () => {
 		const content = [
 			"## 見出し 2",
 			"",
@@ -25,6 +25,40 @@ describe("Post", () => {
 				title="はじめての投稿" 
 				published="2030/10/20" 
 				content={content} 
+			/>)
+			.toJSON()
+		expect(tree).toMatchSnapshot()
+	})
+
+	it("renders correctly with raw html", () => {
+		const content = [
+			"<h3>テーブルサンプル</h3>",
+			"<div>",
+			"	<table>",
+			"		<thead>",
+			"			<tr>",
+			"				<th>カラム 1</th>",
+			"				<th>カラム 2</th>",
+			"			</tr>",
+			"		</thead>",
+			"		<tbody>",
+			"			<tr>",
+			"				<td>1.1</td>",
+			"				<th>1.2</th>",
+			"			</tr>",
+			"			<tr>",
+			"				<td>2.1</td>",
+			"				<th>2.2</th>",
+			"			</tr>",
+			"		</tbody>",
+			"	</table>",
+			"</div>",
+		].join("\n")
+		const tree = renderer
+			.create(<Post
+				title="はじめての投稿"
+				published="2030/10/20"
+				content={content}
 			/>)
 			.toJSON()
 		expect(tree).toMatchSnapshot()

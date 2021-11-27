@@ -152,7 +152,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // testEnvironment: "jest-environment-node",
+  testEnvironment: "jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -186,14 +186,15 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    // Use babel-jest to transpile tests with the next/babel preset
-    // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
+    // // Use babel-jest to transpile tests with the next/babel preset
+    // // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   transformIgnorePatterns: [
-    "/node_modules/",
+    // `export` がシンタックスエラーになるので `node_modules` を一時的に除外する
+    // "/node_modules/",
     '^.+\\.module\\.(css|sass|scss)$',
   ],
 
