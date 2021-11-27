@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - v12
       - v11
   pull_request:
 

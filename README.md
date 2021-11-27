@@ -17,6 +17,7 @@ React ベースのフレームワーク [Next.js](https://nextjs.org/) でシン
 Next.js の各メジャーバージョンにあわせてブランチを作成しています。
 
 - `main`: そのときどきの最新版
+- `v12`: Next.js v12
 - `v11`: Next.js v11
 
 ## 使用ライブラリ

@@ -12,11 +12,13 @@ jobs:
   update:
     name: Create Pull Request to update packages
     runs-on: ubuntu-latest
+    matrix:
+      branch: [v12, v11]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: v11
+          ref: ${{ matrix.branch }}
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
