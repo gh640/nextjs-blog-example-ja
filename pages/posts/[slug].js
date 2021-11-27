@@ -2,8 +2,7 @@ import fs from "fs"
 import path from "path"
 
 import Layout from "../../components/Layout"
-import "prismjs/themes/prism.css"
-import "prismjs/themes/prism-twilight.css"
+import Markdown from "../../components/Markdown"
 import { listContentFiles, readContentFile } from "../../lib/content-loader"
 
 export default function Post(params) {
@@ -12,9 +11,9 @@ export default function Post(params) {
       <div className="post-meta">
         <span>{params.published}</span>
       </div>
-      <div className="post-body"
-        dangerouslySetInnerHTML={{ __html: params.content }}
-      />
+      <div className="post-body">
+        <Markdown>{params.content}</Markdown>
+      </div>
     </Layout>
   )
 }
