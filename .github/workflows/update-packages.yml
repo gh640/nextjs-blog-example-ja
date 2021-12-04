@@ -17,7 +17,7 @@ jobs:
       matrix:
         branch: [v12, v11]
     steps:
-      - name: Checkout
+      - name: Checkout branch ${{ matrix.branch }}
         uses: actions/checkout@v2
         with:
           ref: ${{ matrix.branch }}
@@ -30,3 +30,5 @@ jobs:
         run: npm update
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
+        with:
+          branch: create-pull-request/patch-${{ matrix.branch }}
