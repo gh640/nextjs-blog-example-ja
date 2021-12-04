@@ -12,8 +12,9 @@ jobs:
   update:
     name: Create Pull Request to update packages
     runs-on: ubuntu-latest
-    matrix:
-      branch: [v12, v11]
+    strategy:
+      matrix:
+        branch: [v12, v11]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
