@@ -4,6 +4,7 @@
 import * as React from "react"
 import ReactMarkdown from "react-markdown"
 import rehypeRaw from "rehype-raw"
+import remarkGfm from "remark-gfm"
 import prism from "prismjs"
 
 import "prismjs/themes/prism.css"
@@ -16,7 +17,9 @@ const Markdown = ({ children }) => {
 
   // Markdown 中の HTML を許容するために `rehypeRaw` を利用する
   return (
-    <ReactMarkdown rehypePlugins={[rehypeRaw]}>{children}</ReactMarkdown>
+    <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>
+      {children}
+    </ReactMarkdown>
   )
 }
 
