@@ -77,5 +77,47 @@ Array [
     
 
   </ul>,
+  "
+",
+  <p>
+    テーブル:
+  </p>,
+  "
+
+
+
+
+
+
+
+
+
+
+
+
+
+",
+  <table>
+    <thead>
+      <tr>
+        <th>
+          西
+        </th>
+        <th>
+          東
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          西山
+        </td>
+        <td>
+          東山
+        </td>
+      </tr>
+    </tbody>
+  </table>,
 ]
 `;
