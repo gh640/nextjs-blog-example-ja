@@ -19,6 +19,13 @@ describe("Markdown", () => {
 - これは
 - リスト
 - です
+
+テーブル:
+
+| 西 | 東 |
+| --- | --- |
+| 西山 | 東山 |
+
 			`}</Markdown>)
 			.toJSON()
 		expect(tree).toMatchSnapshot()

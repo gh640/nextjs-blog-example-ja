@@ -18,17 +18,47 @@ jobs:
         branch: [v12, v11]
     steps:
       - name: Checkout branch ${{ matrix.branch }}
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ matrix.branch }}
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
+      - name: Install packages
+        run: npm ci
+      - name: Check outdated packages
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { stdout, stderr } = exec.getExecOutput(`npm outdated`, [])
+            core.setOutput('stdout', stdout)
+            core.setOutput('stderr', stderr)
+        id: npm_outdated
+      - name: Comment summary on action page
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const report = JSON.parse(process.env.OUTDATED_REPORT_JSON)
+            const header = [
+              {data: "Name", header: true},
+              {data: "Current", header: true},
+              {data: "Latest", header: true},
+            ]
+            const rows = Object.entries(report).map(([name, data]) => {
+              return [name, data['current'], data['latest']]
+            })
+            core.summary
+              .addHeading('Outdated packages :broom:')
+              .addTable([header, ...rows])
+              .write()
+        env:
+          OUTDATED_REPORT_JSON: ${{ steps.npm_outdated.outputs.stdout }}
+      - name: Show outdated packages in summary
       - name: Update packages
         run: npm update
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v4
         with:
           branch: create-pull-request/patch-${{ matrix.branch }}
