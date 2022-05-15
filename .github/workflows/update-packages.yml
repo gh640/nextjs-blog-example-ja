@@ -32,7 +32,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const { stdout, stderr } = exec.getExecOutput(`npm outdated`, [], {
+            const { stdout, stderr } = exec.getExecOutput(`npm outdated --json`, [], {
               ignoreReturnCode: true,
             })
             core.setOutput('stdout', stdout)
