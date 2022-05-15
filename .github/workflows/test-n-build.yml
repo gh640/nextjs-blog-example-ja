@@ -1,4 +1,4 @@
-name: "テスト"
+name: "テストとビルド"
 
 on:
   push:
@@ -23,6 +23,15 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
       - name: Install packages
-        run: npm install
-      - name: Run Tests
+        run: npm ci
+      - name: Run tests
         run: npm test
+      - name: Build
+        run: |
+          npm run build
+          npm run export
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: out
+          path: out
