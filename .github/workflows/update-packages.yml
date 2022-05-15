@@ -35,7 +35,7 @@ jobs:
             core.setOutput('stdout', stdout)
             core.setOutput('stderr', stderr)
         id: npm_outdated
-      - name: Comment summary on action page
+      - name: Show outdated packages in summary
         uses: actions/github-script@v6
         with:
           script: |
@@ -54,7 +54,6 @@ jobs:
               .write()
         env:
           OUTDATED_REPORT_JSON: ${{ steps.npm_outdated.outputs.stdout }}
-      - name: Show outdated packages in summary
       - name: Update packages
         run: npm update
       - name: Create Pull Request
