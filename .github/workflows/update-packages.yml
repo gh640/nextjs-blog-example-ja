@@ -31,7 +31,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const { stdout } = exec.getExecOutput(`npm outdated --json`, [], {
+            const { stdout } = await exec.getExecOutput(`npm outdated --json`, [], {
               ignoreReturnCode: true,
             })
             let report
