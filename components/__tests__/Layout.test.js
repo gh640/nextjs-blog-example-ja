@@ -1,4 +1,3 @@
-import { cloneElement } from "react"
 import Head from "next/head"
 import Link from "next/link"
 import renderer from "react-test-renderer"
@@ -6,13 +5,14 @@ import renderer from "react-test-renderer"
 import Layout from "../Layout.js"
 
 jest.mock("next/head")
-jest.mock("next/link")
+jest.mock("next/link", () => {
+	return ({ children, ...attrs }) => {
+		return <a {...attrs}>{children}</a>
+	}
+})
 
 describe("Layout", () => {
 	Head.mockImplementation(({ children }) => children)
-	Link.mockImplementation(({ href, children }) => 
-		cloneElement(children, { href })
-	)
 
 	it("renders collectly with title", () => {
 		const tree = renderer
