@@ -1,16 +1,14 @@
-import { cloneElement } from "react"
-import Link from "next/link"
 import renderer from "react-test-renderer"
 
 import Markdown from "../Markdown.js"
 
-jest.mock("next/link")
+jest.mock("next/link", () => {
+	return ({ children, ...attrs }) => {
+		return <a {...attrs}>{children}</a>
+	}
+})
 
 describe("Markdown", () => {
-	Link.mockImplementation(({ href, children }) => 
-		cloneElement(children, { href })
-	)
-
 	it("renders collectly with simple markdown", () => {
 		const tree = renderer
 			.create(<Markdown>{`

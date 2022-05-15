@@ -21,10 +21,13 @@ exports[`Layout renders collectly with children 1`] = `
       className="jsx-4151687426 site-title"
     >
       <a
-        className="jsx-4151687426"
         href="/"
       >
-        後藤のブログ
+        <a
+          className="jsx-4151687426"
+        >
+          後藤のブログ
+        </a>
       </a>
     </h1>
   </header>
@@ -72,10 +75,13 @@ exports[`Layout renders collectly with title 1`] = `
       className="jsx-4151687426 site-title"
     >
       <a
-        className="jsx-4151687426"
         href="/"
       >
-        後藤のブログ
+        <a
+          className="jsx-4151687426"
+        >
+          後藤のブログ
+        </a>
       </a>
     </h1>
   </header>

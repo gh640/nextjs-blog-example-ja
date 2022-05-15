@@ -4,6 +4,11 @@ import renderer from "react-test-renderer"
 import Layout from "../components/Layout"
 import Post from "../pages/posts/[slug].js"
 
+jest.mock("next/link", () => {
+	return ({ children, ...attrs }) => {
+		return <a {...attrs}>{children}</a>
+	}
+})
 jest.mock("../components/Layout")
 
 describe("Post", () => {

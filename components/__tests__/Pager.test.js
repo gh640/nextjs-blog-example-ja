@@ -1,16 +1,14 @@
-import { cloneElement } from "react"
-import Link from "next/link"
 import renderer from "react-test-renderer"
 
 import Pager from "../Pager.js"
 
-jest.mock("next/link")
+jest.mock("next/link", () => {
+	return ({ children, ...attrs }) => {
+		return <a {...attrs}>{children}</a>
+	}
+})
 
 describe("Pager", () => {
-	Link.mockImplementation(({ href, children }) => 
-		cloneElement(children, { href })
-	)
-
 	it("renders collectly with first page", () => {
 		const tree = renderer
 			.create(<Pager 
