@@ -9,10 +9,14 @@ Array [
       className="jsx-4006167202"
     >
       <a
-        className="jsx-4006167202"
+        as="/posts/kakikukeko"
         href="/posts/[id]"
       >
-        かきくけこ
+        <a
+          className="jsx-4006167202"
+        >
+          かきくけこ
+        </a>
       </a>
     </h2>
     <div
@@ -32,10 +36,14 @@ Array [
       className="jsx-4006167202"
     >
       <a
-        className="jsx-4006167202"
+        as="/posts/aiueo"
         href="/posts/[id]"
       >
-        あいうえお
+        <a
+          className="jsx-4006167202"
+        >
+          あいうえお
+        </a>
       </a>
     </h2>
     <div
@@ -52,10 +60,14 @@ Array [
     className="jsx-4006167202 home-archive"
   >
     <a
-      className="jsx-4006167202"
+      as="/archive/1"
       href="/archive/[page]"
     >
-      アーカイブ
+      <a
+        className="jsx-4006167202"
+      >
+        アーカイブ
+      </a>
     </a>
   </div>,
 ]
