@@ -27,21 +27,21 @@ jobs:
           cache: 'npm'
       - name: Install packages
         run: npm ci
-      - name: Check outdated packages
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const { stdout, stderr } = exec.getExecOutput(`npm outdated --json`, [], {
-              ignoreReturnCode: true,
-            })
-            core.setOutput('stdout', stdout)
-            core.setOutput('stderr', stderr)
-        id: npm_outdated
       - name: Show outdated packages in summary
         uses: actions/github-script@v6
         with:
           script: |
-            const report = JSON.parse(process.env.OUTDATED_REPORT_JSON)
+            const { stdout } = exec.getExecOutput(`npm outdated --json`, [], {
+              ignoreReturnCode: true,
+            })
+            let report
+            try {
+              report = JSON.parse(stdout)
+            } catch (err) {
+              console.error(err)
+              return
+            }
+
             const header = [
               {data: "Name", header: true},
               {data: "Current", header: true},
@@ -54,8 +54,6 @@ jobs:
               .addHeading('Outdated packages :broom:')
               .addTable([header, ...rows])
               .write()
-        env:
-          OUTDATED_REPORT_JSON: ${{ steps.npm_outdated.outputs.stdout }}
       - name: Update packages
         run: npm update
       - name: Create Pull Request
