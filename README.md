@@ -1,4 +1,4 @@
-[![テスト](https://github.com/gh640/nextjs-blog-example-ja/actions/workflows/tests.yml/badge.svg)](https://github.com/gh640/nextjs-blog-example-ja/actions/workflows/tests.yml)
+[![テストとビルド](https://github.com/gh640/nextjs-blog-example-ja/actions/workflows/test-n-build.yml/badge.svg)](https://github.com/gh640/nextjs-blog-example-ja/actions/workflows/test-n-build.yml)
 
 # `nextjs-blog-example-ja`
 
