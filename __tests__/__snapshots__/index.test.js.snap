@@ -73,4 +73,4 @@ Array [
 ]
 `;
 
-exports[`Home renders correctly without posts nor archive 1`] = `""`;
+exports[`Home renders correctly without posts nor archive 1`] = `null`;

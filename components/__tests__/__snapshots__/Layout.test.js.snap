@@ -34,7 +34,6 @@ exports[`Layout renders collectly with children 1`] = `
   <main
     className="jsx-4151687426"
   >
-    
     <div
       className="jsx-4151687426 page-main"
     >

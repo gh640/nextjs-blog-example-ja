@@ -6,9 +6,7 @@ exports[`Pager renders collectly with first page 1`] = `
 >
   <span
     className="jsx-2002780001 pager-item"
-  >
-    
-  </span>
+  />
   <span
     className="jsx-2002780001 pager-item"
   >
@@ -56,9 +54,7 @@ exports[`Pager renders collectly with last page 1`] = `
   </span>
   <span
     className="jsx-2002780001 pager-item"
-  >
-    
-  </span>
+  />
 </div>
 `;
 
