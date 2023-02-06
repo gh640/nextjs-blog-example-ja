@@ -14,9 +14,7 @@ const Layout = (props) => {
 
       <header>
         <h1 className="site-title">
-          <Link href="/">
-            <a>{siteTitle}</a>
-          </Link>
+          <Link href="/">{siteTitle}</Link>
         </h1>
       </header>
 

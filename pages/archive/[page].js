@@ -16,7 +16,7 @@ export default function Archive(props) {
         key={post.slug}
         className="post-teaser"
       >
-        <h2><Link href="/posts/[id]" as={`/posts/${post.slug}`}><a>{post.title}</a></Link></h2>
+        <h2><Link href="/posts/[id]" as={`/posts/${post.slug}`}>{post.title}</Link></h2>
         <div><span>{post.published}</span></div>
       </div>)}
 
@@ -36,7 +36,7 @@ export default function Archive(props) {
         }
       `}</style>
     </Layout>
-  )
+  );
 }
 
 /**
