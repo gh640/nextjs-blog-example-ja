@@ -13,13 +13,13 @@ export default function Home(props) {
         key={post.slug}
         className="post-teaser"
       >
-        <h2><Link href="/posts/[id]" as={`/posts/${post.slug}`}><a>{post.title}</a></Link></h2>
+        <h2><Link href="/posts/[id]" as={`/posts/${post.slug}`}>{post.title}</Link></h2>
         <div><span>{post.published}</span></div>
       </div>)}
 
       {hasArchive ? (
         <div className="home-archive">
-          <Link href="/archive/[page]" as="/archive/1"><a>アーカイブ</a></Link>
+          <Link href="/archive/[page]" as="/archive/1">アーカイブ</Link>
         </div>
       ) : ``}
 
@@ -40,7 +40,7 @@ export default function Home(props) {
         }
       `}</style>
     </Layout>
-  )
+  );
 }
 
 /**
