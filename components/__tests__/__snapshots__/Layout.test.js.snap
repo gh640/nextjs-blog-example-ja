@@ -7,7 +7,7 @@ exports[`Layout renders collectly with children 1`] = `
   <title
     className="jsx-4151687426"
   >
-    後藤のブログ
+    サンプルブログ
   </title>
   <link
     className="jsx-4151687426"
@@ -23,7 +23,7 @@ exports[`Layout renders collectly with children 1`] = `
       <a
         href="/"
       >
-        後藤のブログ
+        サンプルブログ
       </a>
     </h1>
   </header>
@@ -44,7 +44,7 @@ exports[`Layout renders collectly with children 1`] = `
     className="jsx-4151687426"
   >
     © 
-    後藤のブログ
+    サンプルブログ
   </footer>
 </div>
 `;
@@ -56,7 +56,7 @@ exports[`Layout renders collectly with title 1`] = `
   <title
     className="jsx-4151687426"
   >
-    ページタイトル | 後藤のブログ
+    ページタイトル | サンプルブログ
   </title>
   <link
     className="jsx-4151687426"
@@ -72,7 +72,7 @@ exports[`Layout renders collectly with title 1`] = `
       <a
         href="/"
       >
-        後藤のブログ
+        サンプルブログ
       </a>
     </h1>
   </header>
@@ -92,7 +92,7 @@ exports[`Layout renders collectly with title 1`] = `
     className="jsx-4151687426"
   >
     © 
-    後藤のブログ
+    サンプルブログ
   </footer>
 </div>
 `;
