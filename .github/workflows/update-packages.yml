@@ -3,7 +3,7 @@ name: "NPM パッケージの自動アップデート"
 on:
   schedule:
     # 05:20 in UTC is 14:20 in JST.
-    - cron: '20 5 * * 6'
+    - cron: '20 5 5 * *'
   workflow_dispatch:
 
 env:
