@@ -10,15 +10,11 @@ React ベースのフレームワーク [Next.js](https://nextjs.org/) でシン
 
 ## 動作環境
 
-- Node v14
+- Node v18
 
 ## ブランチ構成
 
-Next.js の各メジャーバージョンにあわせてブランチを作成しています。
-
 - `main`: そのときどきの最新版
-- `v12`: Next.js v12
-- `v11`: Next.js v11
 
 ## 使用ライブラリ
 
@@ -28,12 +24,13 @@ Next.js の各メジャーバージョンにあわせてブランチを作成し
 - `react`
 - `react-dom`
 - `react-markdown`
+- `react-syntax-highlighter`
 - `rehype-raw`
+- `remark-gfm`
 - `gray-matter`
-- `prismjs`
 
-Next.js を利用するために必要な `next` `react` `react-dom` の 3 つと、 frontmatter 付きの Markdown の HTML への変換に有用な `react-markdown` `rehype-raw` `gray-matter` を使っています。
-追加で、シンタックスハイライトに Prism.js を利用するための `prismjs` を使っています。
+Next.js を利用するために必要な `next` `react` `react-dom` の 3 つと、 frontmatter 付きの Markdown の HTML への変換に有用な `react-markdown` `rehype-raw` `remark-gfm` `gray-matter` を使っています。
+追加で、シンタックスハイライトに Prism.js を利用するための `react-syntax-highlighter` を使っています。
 
 自動テストには以下のパッケージを使用しています。
 
@@ -121,24 +118,6 @@ rg GA_TRACKING_ID
 参考:
 
 - [Basic Features: Environment Variables | Next.js](https://nextjs.org/docs/basic-features/environment-variables)
-
-### Prism のテーマを変更する
-
-`components/Markdown.js` で読み込むテーマ用 CSS ファイルを変更すれば、コードのシンタックスハイライトのテーマを変更できます。
-
-```js
-import "prismjs/themes/prism-funky.css"
-```
-
-なお、 Prism には以下のテーマが同梱されています。
-
-- `prism-coy.css`
-- `prism-dark.css`
-- `prism-funky.css`
-- `prism-okaidia.css`
-- `prism-solarizedlight.css`
-- `prism-tomorrow.css`
-- `prism-twilight.css`
 
 ## 自動テストを走らせる
 
