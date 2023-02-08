@@ -3,9 +3,8 @@ import renderer from "react-test-renderer"
 import Markdown from "../Markdown.js"
 
 jest.mock("next/link", () => {
-	return ({ children, ...attrs }) => {
-		return <a {...attrs}>{children}</a>
-	}
+	const MockedLink = ({ children, ...rest }) => <a {...rest}>{children}</a>
+	return MockedLink
 })
 
 describe("Markdown", () => {
