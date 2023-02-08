@@ -2,23 +2,23 @@
 
 exports[`Layout renders collectly with children 1`] = `
 <div
-  className="jsx-271807279 page"
+  className="jsx-652147177 page"
 >
   <title
-    className="jsx-271807279"
+    className="jsx-652147177"
   >
     サンプルブログ
   </title>
   <link
-    className="jsx-271807279"
+    className="jsx-652147177"
     href="/favicon.ico"
     rel="icon"
   />
   <header
-    className="jsx-271807279"
+    className="jsx-652147177"
   >
     <h1
-      className="jsx-271807279 site-title"
+      className="jsx-652147177 site-title"
     >
       <a
         href="/"
@@ -28,10 +28,10 @@ exports[`Layout renders collectly with children 1`] = `
     </h1>
   </header>
   <main
-    className="jsx-271807279"
+    className="jsx-652147177"
   >
     <div
-      className="jsx-271807279 page-main"
+      className="jsx-652147177 page-main"
     >
       <div>
         <span>
@@ -41,7 +41,7 @@ exports[`Layout renders collectly with children 1`] = `
     </div>
   </main>
   <footer
-    className="jsx-271807279"
+    className="jsx-652147177"
   >
     © 
     サンプルブログ
@@ -51,23 +51,23 @@ exports[`Layout renders collectly with children 1`] = `
 
 exports[`Layout renders collectly with title 1`] = `
 <div
-  className="jsx-271807279 page"
+  className="jsx-652147177 page"
 >
   <title
-    className="jsx-271807279"
+    className="jsx-652147177"
   >
     ページタイトル | サンプルブログ
   </title>
   <link
-    className="jsx-271807279"
+    className="jsx-652147177"
     href="/favicon.ico"
     rel="icon"
   />
   <header
-    className="jsx-271807279"
+    className="jsx-652147177"
   >
     <h1
-      className="jsx-271807279 site-title"
+      className="jsx-652147177 site-title"
     >
       <a
         href="/"
@@ -77,19 +77,19 @@ exports[`Layout renders collectly with title 1`] = `
     </h1>
   </header>
   <main
-    className="jsx-271807279"
+    className="jsx-652147177"
   >
     <h1
-      className="jsx-271807279 page-title"
+      className="jsx-652147177 page-title"
     >
       ページタイトル
     </h1>
     <div
-      className="jsx-271807279 page-main"
+      className="jsx-652147177 page-main"
     />
   </main>
   <footer
-    className="jsx-271807279"
+    className="jsx-652147177"
   >
     © 
     サンプルブログ

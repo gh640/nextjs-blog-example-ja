@@ -58,33 +58,6 @@ const Layout = (props) => {
           align-items: center;
         }
       `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          color: #222;
-        }
-
-        img,
-        iframe {
-          max-width: 100%;
-        }
-
-        /* Prism のコードブロックに影響を与えず <code> にスタイルを追加 */
-        code:not([class]) {
-          font-family: monospace;
-          font-size: 1rem;
-          background-color: #eee;
-          display: inline-block;
-          padding: .2em .4em;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
   )
 }

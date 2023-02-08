@@ -24,15 +24,41 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <style jsx global>{`
+        * {
+          box-sizing: border-box;
+        }
+
         html {
+          padding: 0;
+          margin: 0;
           font-family: ${noto_sans_jp.style.fontFamily};
             "Hiragino Kaku Gothic ProN", メイリオ, meiryo, sans-serif;
           font-size: 16px;
         }
 
+        body {
+          padding: 0;
+          margin: 0;
+          color: #222;
+        }
+
         h1, h2, h3, h4, h5, h6 {
           font-family: ${montserrat.style.fontFamily},
             "Hiragino Kaku Gothic ProN", メイリオ, meiryo, sans-serif;
+        }
+
+        img,
+        iframe {
+          max-width: 100%;
+        }
+
+        /* Prism のコードブロックに影響を与えず <code> にスタイルを追加 */
+        code:not([class]) {
+          font-family: monospace;
+          font-size: 1rem;
+          background-color: #eee;
+          display: inline-block;
+          padding: .2em .4em;
         }
       `}</style>
       <Component {...pageProps} />
