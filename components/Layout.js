@@ -14,7 +14,13 @@ const Layout = (props) => {
 
       <header>
         <h1 className="site-title">
-          <Link href="/">{siteTitle}</Link>
+          <Link href="/" style={{
+            // `<style jsx>` ではスタイルをつけられないのでインラインで設定する
+            color: 'inherit',
+            textDecoration: 'none',
+          }}>
+            <span className="site-title-text">{siteTitle}</span>
+          </Link>
         </h1>
       </header>
 
@@ -42,11 +48,6 @@ const Layout = (props) => {
           justify-content: center;
           align-items: center;
           margin: 0 0 4em;
-        }
-
-        .site-title a {
-          color: inherit;
-          text-decoration: none;
         }
 
         footer {
