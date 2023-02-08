@@ -14,12 +14,18 @@ const Layout = (props) => {
 
       <header>
         <h1 className="site-title">
-          <Link href="/">{siteTitle}</Link>
+          <Link href="/" style={{
+            // `<style jsx>` ではスタイルをつけられないのでインラインで設定する
+            color: 'inherit',
+            textDecoration: 'none',
+          }}>
+            <span className="site-title-text">{siteTitle}</span>
+          </Link>
         </h1>
       </header>
 
       <main>
-        {title ? <h1 className="page-title">{title}</h1> : ``}
+        {title ? <h1 className="page-title">{title}</h1> : null}
         <div className="page-main">
           {children}
         </div>
@@ -44,11 +50,6 @@ const Layout = (props) => {
           margin: 0 0 4em;
         }
 
-        .site-title a {
-          color: inherit;
-          text-decoration: none;
-        }
-
         footer {
           margin-top: 4em;
           padding-top: 2em;
@@ -56,41 +57,6 @@ const Layout = (props) => {
           display: flex;
           justify-content: center;
           align-items: center;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: 'Noto Sans JP', -apple-system, "Segoe UI", "Helvetica Neue",
-            "Hiragino Kaku Gothic ProN", メイリオ, meiryo, sans-serif;
-          color: #222;
-          font-size: 16px;
-        }
-
-        img,
-        iframe {
-          max-width: 100%;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-          font-family: Montserrat, -apple-system, "Segoe UI", "Helvetica Neue",
-            "Hiragino Kaku Gothic ProN", メイリオ, meiryo, sans-serif;
-        }
-
-        /* Prism のコードブロックに影響を与えず <code> にスタイルを追加 */
-        code:not([class]) {
-          font-family: monospace;
-          font-size: 1rem;
-          background-color: #eee;
-          display: inline-block;
-          padding: .2em .4em;
-        }
-
-        * {
-          box-sizing: border-box;
         }
       `}</style>
     </div>

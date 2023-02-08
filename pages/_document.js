@@ -7,14 +7,6 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          { /*
-             * Google Fonts を利用する
-             *
-             * - Montserrat
-             * - Noto Sans JP
-             */ }
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
-
           { /* gtag / Google Analytics を利用する */}
           {
             GA_TRACKING_ID && <script

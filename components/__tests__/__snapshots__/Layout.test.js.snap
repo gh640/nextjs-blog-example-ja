@@ -2,36 +2,46 @@
 
 exports[`Layout renders collectly with children 1`] = `
 <div
-  className="jsx-4151687426 page"
+  className="jsx-4096959289 page"
 >
   <title
-    className="jsx-4151687426"
+    className="jsx-4096959289"
   >
     サンプルブログ
   </title>
   <link
-    className="jsx-4151687426"
+    className="jsx-4096959289"
     href="/favicon.ico"
     rel="icon"
   />
   <header
-    className="jsx-4151687426"
+    className="jsx-4096959289"
   >
     <h1
-      className="jsx-4151687426 site-title"
+      className="jsx-4096959289 site-title"
     >
       <a
         href="/"
+        style={
+          Object {
+            "color": "inherit",
+            "textDecoration": "none",
+          }
+        }
       >
-        サンプルブログ
+        <span
+          className="jsx-4096959289 site-title-text"
+        >
+          サンプルブログ
+        </span>
       </a>
     </h1>
   </header>
   <main
-    className="jsx-4151687426"
+    className="jsx-4096959289"
   >
     <div
-      className="jsx-4151687426 page-main"
+      className="jsx-4096959289 page-main"
     >
       <div>
         <span>
@@ -41,7 +51,7 @@ exports[`Layout renders collectly with children 1`] = `
     </div>
   </main>
   <footer
-    className="jsx-4151687426"
+    className="jsx-4096959289"
   >
     © 
     サンプルブログ
@@ -51,45 +61,55 @@ exports[`Layout renders collectly with children 1`] = `
 
 exports[`Layout renders collectly with title 1`] = `
 <div
-  className="jsx-4151687426 page"
+  className="jsx-4096959289 page"
 >
   <title
-    className="jsx-4151687426"
+    className="jsx-4096959289"
   >
     ページタイトル | サンプルブログ
   </title>
   <link
-    className="jsx-4151687426"
+    className="jsx-4096959289"
     href="/favicon.ico"
     rel="icon"
   />
   <header
-    className="jsx-4151687426"
+    className="jsx-4096959289"
   >
     <h1
-      className="jsx-4151687426 site-title"
+      className="jsx-4096959289 site-title"
     >
       <a
         href="/"
+        style={
+          Object {
+            "color": "inherit",
+            "textDecoration": "none",
+          }
+        }
       >
-        サンプルブログ
+        <span
+          className="jsx-4096959289 site-title-text"
+        >
+          サンプルブログ
+        </span>
       </a>
     </h1>
   </header>
   <main
-    className="jsx-4151687426"
+    className="jsx-4096959289"
   >
     <h1
-      className="jsx-4151687426 page-title"
+      className="jsx-4096959289 page-title"
     >
       ページタイトル
     </h1>
     <div
-      className="jsx-4151687426 page-main"
+      className="jsx-4096959289 page-main"
     />
   </main>
   <footer
-    className="jsx-4151687426"
+    className="jsx-4096959289"
   >
     © 
     サンプルブログ

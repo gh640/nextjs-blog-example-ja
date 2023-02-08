@@ -21,7 +21,7 @@ export default function Home(props) {
         <div className="home-archive">
           <Link href="/archive/1">アーカイブ</Link>
         </div>
-      ) : ``}
+      ) : null}
 
       <style jsx>{`
         .post-teaser {
