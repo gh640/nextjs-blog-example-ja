@@ -22,8 +22,7 @@ export default function Archive(props) {
 
       <Pager
         page={page} total={total} perPage={perPage}
-        href="/archive/[page]"
-        asCallback={(page) => `/archive/${page}`}
+        hrefCallback={(page) => `/archive/${page}`}
       />
 
       <style jsx>{`

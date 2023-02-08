@@ -1,14 +1,13 @@
 import Head from "next/head"
-import Link from "next/link"
+// import Link from "next/link"
 import renderer from "react-test-renderer"
 
 import Layout from "../Layout.js"
 
 jest.mock("next/head")
 jest.mock("next/link", () => {
-	return ({ children, ...attrs }) => {
-		return <a {...attrs}>{children}</a>
-	}
+	const MockedLink = ({ children, ...rest }) => <a {...rest}>{children}</a>
+	return MockedLink
 })
 
 describe("Layout", () => {

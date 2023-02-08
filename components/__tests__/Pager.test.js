@@ -3,9 +3,8 @@ import renderer from "react-test-renderer"
 import Pager from "../Pager.js"
 
 jest.mock("next/link", () => {
-	return ({ children, ...attrs }) => {
-		return <a {...attrs}>{children}</a>
-	}
+	const MockedLink = ({ children, ...rest }) => <a {...rest}>{children}</a>
+	return MockedLink
 })
 
 describe("Pager", () => {
@@ -15,8 +14,7 @@ describe("Pager", () => {
 				total={105}
 				page={1}
 				perPage={10}
-				href="/archive/[page]"
-				asCallback={(page) => `/archive/${page}`}
+				hrefCallback={(page) => `/archive/${page}`}
 			/>)
 			.toJSON()
 		expect(tree).toMatchSnapshot()
@@ -28,8 +26,7 @@ describe("Pager", () => {
 				total={105}
 				page={2}
 				perPage={10}
-				href="/archive/[page]"
-				asCallback={(page) => `/archive/${page}`}
+				hrefCallback={(page) => `/archive/${page}`}
 			/>)
 			.toJSON()
 		expect(tree).toMatchSnapshot()
@@ -41,8 +38,7 @@ describe("Pager", () => {
 				total={27}
 				page={6}
 				perPage={5}
-				href="/archive/[page]"
-				asCallback={(page) => `/archive/${page}`}
+				hrefCallback={(page) => `/archive/${page}`}
 			/>)
 			.toJSON()
 		expect(tree).toMatchSnapshot()
