@@ -14,8 +14,7 @@ describe("Pager", () => {
 				total={105}
 				page={1}
 				perPage={10}
-				href="/archive/[page]"
-				asCallback={(page) => `/archive/${page}`}
+				hrefCallback={(page) => `/archive/${page}`}
 			/>)
 			.toJSON()
 		expect(tree).toMatchSnapshot()
@@ -27,8 +26,7 @@ describe("Pager", () => {
 				total={105}
 				page={2}
 				perPage={10}
-				href="/archive/[page]"
-				asCallback={(page) => `/archive/${page}`}
+				hrefCallback={(page) => `/archive/${page}`}
 			/>)
 			.toJSON()
 		expect(tree).toMatchSnapshot()
@@ -40,8 +38,7 @@ describe("Pager", () => {
 				total={27}
 				page={6}
 				perPage={5}
-				href="/archive/[page]"
-				asCallback={(page) => `/archive/${page}`}
+				hrefCallback={(page) => `/archive/${page}`}
 			/>)
 			.toJSON()
 		expect(tree).toMatchSnapshot()

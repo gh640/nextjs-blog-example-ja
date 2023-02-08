@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 const Pager = (props) => {
-  const { total, page, perPage, href, asCallback } = props
+  const { total, page, perPage, hrefCallback } = props
 
   const prevPage = page > 1 ? page - 1 : null
   let nextPage = null
@@ -13,13 +13,13 @@ const Pager = (props) => {
     <div className="pager">
       <span className="pager-item">
         {prevPage ? (
-          <Link href={href} as={asCallback(prevPage)}>{prevPage}</Link>
+          <Link href={hrefCallback(prevPage)}>{prevPage}</Link>
         ) : null}
       </span>
       <span className="pager-item">{page}</span>
       <span className="pager-item">
         {nextPage ? (
-          <Link href={href} as={asCallback(nextPage)}>{nextPage}</Link>
+          <Link href={hrefCallback(nextPage)}>{nextPage}</Link>
         ) : null}
       </span>
 

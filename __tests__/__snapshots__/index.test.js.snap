@@ -9,8 +9,7 @@ Array [
       className="jsx-4006167202"
     >
       <a
-        as="/posts/kakikukeko"
-        href="/posts/[id]"
+        href="/posts/kakikukeko"
       >
         かきくけこ
       </a>
@@ -32,8 +31,7 @@ Array [
       className="jsx-4006167202"
     >
       <a
-        as="/posts/aiueo"
-        href="/posts/[id]"
+        href="/posts/aiueo"
       >
         あいうえお
       </a>
@@ -52,8 +50,7 @@ Array [
     className="jsx-4006167202 home-archive"
   >
     <a
-      as="/archive/1"
-      href="/archive/[page]"
+      href="/archive/1"
     >
       アーカイブ
     </a>

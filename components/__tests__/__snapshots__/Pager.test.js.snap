@@ -16,8 +16,7 @@ exports[`Pager renders collectly with first page 1`] = `
     className="jsx-2002780001 pager-item"
   >
     <a
-      as="/archive/2"
-      href="/archive/[page]"
+      href="/archive/2"
     >
       2
     </a>
@@ -33,8 +32,7 @@ exports[`Pager renders collectly with last page 1`] = `
     className="jsx-2002780001 pager-item"
   >
     <a
-      as="/archive/5"
-      href="/archive/[page]"
+      href="/archive/5"
     >
       5
     </a>
@@ -58,8 +56,7 @@ exports[`Pager renders collectly with second page 1`] = `
     className="jsx-2002780001 pager-item"
   >
     <a
-      as="/archive/1"
-      href="/archive/[page]"
+      href="/archive/1"
     >
       1
     </a>
@@ -73,8 +70,7 @@ exports[`Pager renders collectly with second page 1`] = `
     className="jsx-2002780001 pager-item"
   >
     <a
-      as="/archive/3"
-      href="/archive/[page]"
+      href="/archive/3"
     >
       3
     </a>
