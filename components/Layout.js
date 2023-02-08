@@ -19,7 +19,7 @@ const Layout = (props) => {
       </header>
 
       <main>
-        {title ? <h1 className="page-title">{title}</h1> : ``}
+        {title ? <h1 className="page-title">{title}</h1> : null}
         <div className="page-main">
           {children}
         </div>
