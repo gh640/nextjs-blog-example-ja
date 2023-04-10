@@ -1,3 +1,5 @@
+2023/04/10 積極的にメンテナンスできなくなったためアーカイブしました。 Next.js は引き続き人気ですが、「 Next.js でブログを作る」という使い方をする人はもう少なくなったのではないかという気がします。
+
 [![テストとビルド](https://github.com/gh640/nextjs-blog-example-ja/actions/workflows/test-n-build.yml/badge.svg)](https://github.com/gh640/nextjs-blog-example-ja/actions/workflows/test-n-build.yml)
 
 # `nextjs-blog-example-ja`
